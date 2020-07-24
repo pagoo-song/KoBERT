@@ -79,7 +79,7 @@ def get_kobert_model(model_file,
         'word_embed': None,
     }
 
-    encoder = BERTEncoder(attention_cell=predefined_args['attention_cell'],
+    encoder = BERTEncoder(
                           num_layers=predefined_args['num_layers'],
                           units=predefined_args['units'],
                           hidden_size=predefined_args['hidden_size'],
@@ -90,6 +90,7 @@ def get_kobert_model(model_file,
                           output_attention=False,
                           output_all_encodings=False,
                           use_residual=predefined_args['use_residual'])
+#attention_cell=predefined_args['attention_cell'],
 
     # BERT
     net = BERTModel(
